@@ -1,8 +1,8 @@
 package org.example.com.kotlinplayground.basics
 
 fun main() {
-    //if-else
-    //when
+    //if-else is an expression. Expression always evaluate to a result
+    //when block allows us to write concise and expressive code when dealing with multiple conditions
 
     var name = "Anders"
     name = "Chloe"
