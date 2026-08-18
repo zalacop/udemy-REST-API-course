@@ -17,4 +17,21 @@ fun main() {
 
     println("result : $result")
 
+    //1 -> GOLD, 2 -> SILVER, 3 -> BRONZE
+
+    var position = 1
+    position = 2
+
+    val medal = if( position == 1 ) {
+        "GOLD"
+    } else if (position == 2) {
+        "SILVER"
+    } else if (position == 3) {
+        "BRONZE"
+    } else {
+        "NO MEDAL"
+    }
+
+    println(medal)
+
 }
