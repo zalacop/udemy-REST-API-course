@@ -22,7 +22,7 @@ fun main() {
     var position = 1
     position = 2
 
-    val medal = if( position == 1 ) {
+    /* val medal = if( position == 1 ) {
         "GOLD"
     } else if (position == 2) {
         "SILVER"
@@ -30,6 +30,21 @@ fun main() {
         "BRONZE"
     } else {
         "NO MEDAL"
+    }*/
+
+    val medal = when (position) {
+        1 -> {
+            "GOLD"
+        }
+        2 -> {
+            "SILVER"
+        }
+        3 -> {
+            "BRONZE"
+        }
+        else -> {
+            "NO MEDAL"
+        }
     }
 
     println(medal)
