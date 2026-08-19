@@ -7,4 +7,13 @@ fun main() {
         println("i : $i")
     }
 
+    val reversRange = 10 downTo 1
+    for (i in reversRange) {
+        println("reversRange : $i")
+    }
+
+    for (i in reversRange step 2) {
+        println("reversRange with skip: $i")
+    }
+
 }
