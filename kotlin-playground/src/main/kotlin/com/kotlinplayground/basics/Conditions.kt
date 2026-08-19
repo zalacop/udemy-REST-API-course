@@ -7,7 +7,7 @@ fun main() {
     var name = "Anders"
     name = "Chloe"
 
-    val result = if (name.length  ==4) {
+    val result = if (name.length  == 4) {
         println("Name is four characters")
         name
     } else{
