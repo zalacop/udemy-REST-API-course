@@ -22,7 +22,7 @@ fun main() {
 fun exploreDoWhile() {
     var i = 0
     do {
-        println("Value of i is : $i")
+        println("Inside do while : $i")
         i++
     } while (i < 5)
 }
