@@ -16,6 +16,15 @@ fun main() {
         println("reversRange with skip: $i")
     }
     exploreWhile()
+    exploreDoWhile()
+}
+
+fun exploreDoWhile() {
+    var i = 0
+    do {
+        println("Value of i is : $i")
+        i++
+    } while (i < 5)
 }
 
 fun exploreWhile() {
