@@ -2,12 +2,17 @@ package org.example.com.kotlinplayground.basics
 
 fun main() {
 
-    for (i in 1..10) {
+    for (i in 1..5) {
         println("i in $i")
         if(i==3) break
     }
 
     label()
+
+    for (i in 1..5) {
+        println("i in return $i")
+        if(i==3) return
+    }
 
     println("End of the Program!")
 }
