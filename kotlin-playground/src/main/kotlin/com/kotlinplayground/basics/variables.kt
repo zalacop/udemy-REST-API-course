@@ -1,5 +1,8 @@
 package org.example.com.kotlinplayground.basics
 
+import org.example.com.kotlinplayground.functions.courseName
+import org.example.com.kotlinplayground.functions.topLevelFunction
+
 fun main() {
     val name = "Zala"
     println(name)
@@ -25,5 +28,10 @@ fun main() {
         DEF
     """.trimIndent()           //Multiline strings using TripleQuotes
     println(multiLine1)
+
+    topLevelFunction()
+    val num = topLevelFunction()
+    println("Num is : $num")
+    println("courseName = $courseName")
 
 }
