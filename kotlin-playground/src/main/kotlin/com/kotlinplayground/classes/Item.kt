@@ -16,3 +16,8 @@ fun main() {
     item.name = "iPhone 17 Pro"
     println("Name is : ${item.name}")
 }
+
+
+//Use Primary constructors whenever possible.
+//Use default values for overloaded constructor scenario
+//Use Secondary constructors only when necessary 
