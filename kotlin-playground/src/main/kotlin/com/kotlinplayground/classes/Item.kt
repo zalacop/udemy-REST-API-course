@@ -13,4 +13,6 @@ class Item() {
 fun main() {
     val item = Item(_name = "iPhone")
     println("Name is : ${item.name}")
+    item.name = "iPhone 17 Pro"
+    println("Name is : ${item.name}")
 }
