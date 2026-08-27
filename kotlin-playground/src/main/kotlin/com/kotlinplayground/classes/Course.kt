@@ -6,6 +6,10 @@ data class Course(
     val author: String
 )
 
+//data classes are primary for classes that's going to behave as a data container
+//it auto-generates a lot of functionalities for you when you add  the DATA modifier tot the class
+//its pretty easy to create a clone of an object using the copy() function
+
 fun main() {
     val course = Course(id = 1, name = "Reactive Programming in modern Java using Project reactor", author = "Alice")
 
