@@ -8,4 +8,10 @@ data class Course(
 
 fun main() {
     val course = Course(id = 1, name = "Reactive Programming in modern Java using Project reactor", author = "Alice")
+
+    //println(course)
+
+    val course1 = Course(id = 1, name = "Reactive Programming in modern Java using Project reactor", author = "Alice")
+
+    println("Checking object equality : ${course == course1}")
 }
