@@ -3,6 +3,8 @@ package org.example.com.kotlinplayground.classes
 class Item() {
 
     var name: String = ""
+    var price: Double = 0.0
+        get() = field
 
     constructor(_name: String) : this() {
         name = _name
@@ -15,7 +17,7 @@ fun main() {
     println("Name is : ${item.name}")
     item.name = "iPhone 17 Pro"
     println("Name is : ${item.name}")
-    println(item)
+    println(item.price)
 }
 
 
