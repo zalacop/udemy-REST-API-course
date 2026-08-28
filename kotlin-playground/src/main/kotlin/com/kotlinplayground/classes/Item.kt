@@ -18,6 +18,8 @@ class Item() {
         }
     }
 
+    //Use it when you have the need to implement the custom logic for setting or retrieving the properties
+
     constructor(_name: String) : this() {
         name = _name
     }
@@ -29,7 +31,7 @@ fun main() {
     println("Name is : ${item.name}")
     item.name = "iPhone 17 Pro"
     println("Name is : ${item.name}")
-    item.price = -10.0
+    item.price = 10.0
     println(item.price)
 }
 
