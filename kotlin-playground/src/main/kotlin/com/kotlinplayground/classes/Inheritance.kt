@@ -2,12 +2,16 @@ package org.example.com.kotlinplayground.classes
 
 open class User(val name: String) {
 
-    fun login() {
+    open fun login() {
         println("Inside user login")
     }
 }
 
-class Student(name: String) : User(name)
+class Student(name: String) : User(name) {
+    override fun login() {
+        println("Inside student login")
+    }
+}
 
 class Instructor(name: String) : User(name)
 
