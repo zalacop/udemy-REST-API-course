@@ -1,6 +1,6 @@
 package org.example.com.kotlinplayground.classes
 
-object Authenticate {
+object Authenticate {       //This keyword allows us to create a class and an instance of the class at the same time
 
     fun authenticate(userName: String, password: String) {
         println("User authenticate for userName: $userName")
