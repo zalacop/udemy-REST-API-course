@@ -28,6 +28,11 @@ class NoSqlCourseRepository : CourseRepository {
             name = "Reactive Programming in modern Java using Project reactor",
             author = "Alice")
     }
+
+    override fun save(course: Course): Int {
+        println("Course in NoSqlCourseRepository : $course")
+        return course.id
+    }
 }
 
 fun main() {
@@ -42,4 +47,8 @@ fun main() {
     val noSqlCourseRepository = NoSqlCourseRepository()
     val course1 = noSqlCourseRepository.getById(id = 2)
     println("Course is $course1")
+    val savedCourseId = noSqlCourseRepository.save(Course(id = 6,
+        name = "Reactive Programming in modern Java using Project reactor",
+        author = "Alice"))
+    println("Saved course Id in noSqlCourseRepository is $savedCourseId")
 }
