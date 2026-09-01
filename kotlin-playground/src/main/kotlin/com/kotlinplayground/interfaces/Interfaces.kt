@@ -16,8 +16,20 @@ class SqlCourseRepository : CourseRepository {
     }
 }
 
+class NoSqlCourseRepository : CourseRepository {
+    override fun getById(id: Int): Course {
+        return Course(id,
+            name = "Reactive Programming in modern Java using Project reactor",
+            author = "Alice")
+    }
+}
+
 fun main() {
     val sqlCourseRepository = SqlCourseRepository()
     val course = sqlCourseRepository.getById(id = 1)
     println("Course is $course")
+
+    val noSqlCourseRepository = NoSqlCourseRepository()
+    val course1 = noSqlCourseRepository.getById(id = 2)
+    println("Course is $course1")
 }
