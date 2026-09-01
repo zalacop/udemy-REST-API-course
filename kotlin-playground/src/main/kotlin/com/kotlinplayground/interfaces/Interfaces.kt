@@ -11,14 +11,22 @@ interface CourseRepository {
         println("Course : $course")
         return course.id
     }
-
 }
 
-class SqlCourseRepository : CourseRepository {
+interface Repository {
+
+    fun getAll(): Any
+}
+
+class SqlCourseRepository : CourseRepository, Repository {
     override fun getById(id: Int): Course {
         return Course(id,
             name = "Reactive Programming in modern Java using Project reactor",
             author = "Alice")
+    }
+
+    override fun getAll(): Any {
+        return 8
     }
 }
 
