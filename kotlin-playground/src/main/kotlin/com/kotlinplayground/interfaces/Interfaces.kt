@@ -19,13 +19,18 @@ interface Repository {
 }
 
 class SqlCourseRepository : CourseRepository, Repository {
-    override val isCoursePersisted: Boolean
+    override var isCoursePersisted: Boolean = false
         get() = TODO("Not yet implemented")
 
     override fun getById(id: Int): Course {
         return Course(id,
             name = "Reactive Programming in modern Java using Project reactor",
             author = "Alice")
+    }
+
+    override fun save(course: Course): Int {
+        isCoursePersisted = true
+        return super.save(course)
     }
 
     override fun getAll(): Any {
@@ -78,6 +83,8 @@ fun main() {
     val courseId = sqlCourseRepository.save(Course(id = 5,
         name = "Reactive Programming in modern Java using Project reactor",
         author = "Alice"))
+
+    println("Course persisted value is ${sqlCourseRepository.isCoursePersisted}")
     println("Saved course Id is $courseId")
 
     val noSqlCourseRepository = NoSqlCourseRepository()
