@@ -20,8 +20,6 @@ interface Repository {
 
 class SqlCourseRepository : CourseRepository, Repository {
     override var isCoursePersisted: Boolean = false
-        get() = TODO("Not yet implemented")
-
     override fun getById(id: Int): Course {
         return Course(id,
             name = "Reactive Programming in modern Java using Project reactor",
@@ -62,8 +60,7 @@ class AB : A, B {
 }
 
 class NoSqlCourseRepository : CourseRepository {
-    override val isCoursePersisted: Boolean
-        get() = TODO("Not yet implemented")
+    override val isCoursePersisted: Boolean = false
     override fun getById(id: Int): Course {
         return Course(id,
             name = "Reactive Programming in modern Java using Project reactor",
