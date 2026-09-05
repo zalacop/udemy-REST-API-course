@@ -3,7 +3,7 @@ package org.example.com.kotlinplayground.interfaces
 import org.example.com.kotlinplayground.classes.Course
 
 interface CourseRepository {
-
+    val isCoursePersisted: Boolean
     fun getById(id: Int): Course
 
     fun save(course: Course) : Int {
@@ -19,6 +19,9 @@ interface Repository {
 }
 
 class SqlCourseRepository : CourseRepository, Repository {
+    override val isCoursePersisted: Boolean
+        get() = TODO("Not yet implemented")
+
     override fun getById(id: Int): Course {
         return Course(id,
             name = "Reactive Programming in modern Java using Project reactor",
@@ -54,6 +57,8 @@ class AB : A, B {
 }
 
 class NoSqlCourseRepository : CourseRepository {
+    override val isCoursePersisted: Boolean
+        get() = TODO("Not yet implemented")
     override fun getById(id: Int): Course {
         return Course(id,
             name = "Reactive Programming in modern Java using Project reactor",
