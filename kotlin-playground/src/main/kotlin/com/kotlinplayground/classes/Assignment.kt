@@ -7,4 +7,7 @@ data class Employee(
 fun main() {
     val employee = Employee(id = 1, name = "Eric")
     println(employee)
+
+    val employee2 = Employee(id = 1, name = "Eric")
+    println(employee == employee2)
 }
