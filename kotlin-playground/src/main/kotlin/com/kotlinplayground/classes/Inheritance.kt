@@ -11,7 +11,7 @@ open class User(val name: String) {
         println("Inside user login")
     }
 
-    protected fun logout() {        //A protected member is visible in the class and subclasses
+    protected open fun logout() {        //A protected member is visible in the class and subclasses
         println("Inside user logout")
     }
 }
@@ -27,6 +27,11 @@ class Student(name: String) : User(name) {
         println("Inside student login")
         super.login()
     }
+
+    public override fun logout() {          //This is the default access modifier 
+        super.logout()
+        println("Inside student logout")
+    }
 }
 
 class Instructor(name: String) : User(name)
@@ -34,7 +39,7 @@ class Instructor(name: String) : User(name)
 fun main() {
     val student = Student("Zala")
     println("Name is: ${student.name}")
-    student.login()
+    student.logout()
     student.isLoggedIn = true
     println("Logged in value is: ${student.isLoggedIn}")
 
@@ -47,5 +52,4 @@ fun main() {
     instructor.login()
 
     val user = User("Dilip")
-    user.
 }
