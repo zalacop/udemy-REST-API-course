@@ -17,6 +17,13 @@ fun checkType(type: Any) {
     }
 }
 
+fun castNumber(any: Any) {
+
+    when (any) {
+        any as Double -> println("Value is double")
+    }
+}
+
 fun main() {
 
     val course = Course(id = 1, name = "Reactive Programming in modern Java using Project reactor", author = "Alice")
@@ -24,6 +31,10 @@ fun main() {
     checkType(course)
     checkType("ALICE")
 
+    castNumber(1.0)
+    castNumber(1)
 }
+
+
 
 
