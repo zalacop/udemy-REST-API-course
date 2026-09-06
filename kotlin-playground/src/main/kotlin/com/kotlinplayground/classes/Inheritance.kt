@@ -10,6 +10,10 @@ open class User(val name: String) {
     private fun secret() {        // This marks the function or variable accessible only to that specific class
         println("Inside user login")
     }
+
+    protected fun logout() {        //A protected member is visible in the class and subclasses
+        println("Inside user logout")
+    }
 }
 
 class Student(name: String) : User(name) {
