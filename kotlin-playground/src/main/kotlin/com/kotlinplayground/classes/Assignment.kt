@@ -10,4 +10,8 @@ fun main() {
 
     val employee2 = Employee(id = 1, name = "Eric")
     println(employee == employee2)
+
+    val employee3 = Employee(id = 3, name = "Joe")
+    println(employee3)
+
 }
