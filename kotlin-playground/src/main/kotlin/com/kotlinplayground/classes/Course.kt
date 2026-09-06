@@ -21,7 +21,7 @@ enum class CourseCategory {
 fun main() {
     val course = Course(id = 1, name = "Reactive Programming in modern Java using Project reactor", author = "Alice")
 
-    //println(course)
+    println(course)
 
     val course1 = Course(id = 2, name = "Reactive Programming in modern Java using Project reactor", author = "Alice")
 
@@ -30,4 +30,8 @@ fun main() {
     val course2 = course1.copy(id = 3, author = "Dilip" )
 
     println(course2)
+
+    val marketingCourse = Course(id = 4, name = "Facebook Marketing", author = "Alice", courseCategory = CourseCategory.MARKETING)
+
+    println(marketingCourse)
 }
