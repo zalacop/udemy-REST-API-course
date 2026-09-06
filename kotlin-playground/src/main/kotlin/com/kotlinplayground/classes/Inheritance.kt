@@ -6,6 +6,10 @@ open class User(val name: String) {
     open fun login() {
         println("Inside user login")
     }
+
+    private fun secret() {        // This marks the function or variable accessible only to that specific class
+        println("Inside user login")
+    }
 }
 
 class Student(name: String) : User(name) {
@@ -37,4 +41,7 @@ fun main() {
     val instructor = Instructor("Dilip")
     println("Name is: ${instructor.name}")
     instructor.login()
+
+    val user = User("Dilip")
+    user.
 }
