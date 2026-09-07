@@ -4,4 +4,7 @@ fun main() {
 
     var nameNullable : String? = null
     println("Value is : $nameNullable")
+
+    nameNullable = "Zala"
+    println("Value is : $nameNullable")
 }
