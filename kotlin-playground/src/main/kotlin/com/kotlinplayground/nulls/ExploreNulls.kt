@@ -17,8 +17,9 @@ fun main() {
 }
 */
 
-    //nameNullable = "Alex"
-    val length = nameNullable?.length ?: 0 //elvis operator -> ?:
+    nameNullable = "Alex"
+    //val length = nameNullable?.length?.toLong() ?: 0 //elvis operator -> ?:
+    val length = nameNullable.length.toLong()
     println("Length is $length")
 
     nameNullable = "Zala"
@@ -28,11 +29,13 @@ fun main() {
 
     val movie = Movie(null, name = "Avengers")
     val savedMovie = saveMovie(movie)
+    println(savedMovie.id!!) //non null assertion -> !!
     println("Saved movie : $savedMovie")
 
 }
 
 fun saveMovie(movie: Movie) : Movie {
 
-    return movie.copy(id = 1)
+    //return movie.copy(id = 1)
+    return movie
 }
