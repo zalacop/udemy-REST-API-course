@@ -9,8 +9,13 @@ data class Movie(
 fun main() {
 
     var nameNullable : String? = null
-    println("Value is : ${nameNullable.length}")
 
+    println("Value is : ${nameNullable?.length}")
+
+    /*if (nameNullable != null) {
+        println("Value is : ${nameNullable.length}")
+    }
+*/
     nameNullable = "Zala"
     println("Value is : $nameNullable")
 
