@@ -9,7 +9,7 @@ data class Movie(
 fun main() {
 
     var nameNullable : String? = null
-    println("Value is : $nameNullable")
+    println("Value is : ${nameNullable.length}")
 
     nameNullable = "Zala"
     println("Value is : $nameNullable")
