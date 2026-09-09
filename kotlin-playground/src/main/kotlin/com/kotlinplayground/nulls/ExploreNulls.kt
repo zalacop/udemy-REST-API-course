@@ -10,12 +10,17 @@ fun main() {
 
     var nameNullable : String? = null
 
-    println("Value is : ${nameNullable?.length}")
+    println("Value is : ${nameNullable?.length}") //safe operator -> ?
 
     /*if (nameNullable != null) {
-        println("Value is : ${nameNullable.length}")
-    }
+    println("Value is : ${nameNullable.length}")
+}
 */
+    
+    nameNullable = "Alex"
+    val length = nameNullable.length
+    println("Length is $length")
+
     nameNullable = "Zala"
     println("Value is : $nameNullable")
 
