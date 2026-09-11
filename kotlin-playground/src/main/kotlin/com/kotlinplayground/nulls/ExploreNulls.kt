@@ -14,7 +14,10 @@ fun main() {
 
     var nameNullable : String? = null
 
-    printName(nameNullable!!)
+    //printName(nameNullable!!)
+    nameNullable?.run {
+        printName(this)
+    }
 
     println("Value is : ${nameNullable?.length}") //safe operator -> ?
 
@@ -42,6 +45,6 @@ fun main() {
 
 fun saveMovie(movie: Movie) : Movie {
 
-    //return movie.copy(id = 1)
-    return movie
+    return movie.copy(id = 1)
+    //return movie
 }
