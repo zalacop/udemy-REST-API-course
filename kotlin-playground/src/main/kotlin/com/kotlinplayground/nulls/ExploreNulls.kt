@@ -6,9 +6,15 @@ data class Movie(
     val name: String
 )
 
+fun printName(name: String) {
+    println("Name is: $name")
+}
+
 fun main() {
 
     var nameNullable : String? = null
+
+    printName(nameNullable!!)
 
     println("Value is : ${nameNullable?.length}") //safe operator -> ?
 
