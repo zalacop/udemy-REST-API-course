@@ -10,6 +10,10 @@ fun printName(name: String) {
     println("Name is: $name")
 }
 
+fun printName1(name: String?) {
+    println("Name is: $name")
+}
+
 fun main() {
 
     var nameNullable : String? = null
@@ -35,6 +39,7 @@ fun main() {
     println("Value is : $nameNullable")
 
     var name : String = "Zala"
+    printName1(name)
 
     val movie = Movie(null, name = "Avengers")
     val savedMovie = saveMovie(movie)
