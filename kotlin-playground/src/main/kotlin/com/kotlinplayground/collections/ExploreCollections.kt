@@ -26,3 +26,6 @@ fun main() {
     nameAgeMutableMap["abc"] = 100
     println("NameAge MutableMap after put: $nameAgeMutableMap")
 }
+
+// Immutable collection is not modifiable once created
+// Mutable collection allows modifying the data in the collection
