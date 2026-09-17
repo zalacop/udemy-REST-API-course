@@ -1,5 +1,8 @@
 package org.example.com.kotlinplayground.collections
 
+
+// Higher order function
+
 fun calculate(x: Int, y: Int, op : (x: Int, y: Int) -> Int): Int {
     return op(x, y)
 }
@@ -19,9 +22,11 @@ fun main() {
     val multiplyResult = multiplyLambda(2, 3)
     println("Multiply Lambda : $multiplyResult")
 
-    val result = calculate(2, 3, { a, b -> a * b})
+    val result = calculate(2, 3) { a, b -> a * b }
     println("Result : $result")
 
+    val add = calculate(2, 3) { a, b -> a + b }
+    println("Add result : $add")
 }
 
 // Lambda expressions are small pieces of code that can be passed to other functions
