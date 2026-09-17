@@ -1,7 +1,10 @@
 package org.example.com.kotlinplayground.collections
 
-fun main() {
+fun calculate(x: Int, y: Int, op : (x: Int, y: Int) -> Int): Int {
+    return op(x, y)
+}
 
+fun main() {
 
     val addLambda = { x: Int -> x + x }
 
@@ -15,6 +18,9 @@ fun main() {
 
     val multiplyResult = multiplyLambda(2, 3)
     println("Multiply Lambda : $multiplyResult")
+
+    val result = calculate(2, 3, { a, b -> a * b})
+    println("Result : $result")
 
 }
 
