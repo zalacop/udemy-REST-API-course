@@ -9,4 +9,12 @@ fun main() {
     println("Names mutable list before add: $namesMutableList")
     namesMutableList.add("Adam")
     println("Names mutable list after add: $namesMutableList")
+
+    val set = setOf("Alex", "Ben", "Chloe")
+    println("Set: $set")
+
+    val mutableSet = mutableSetOf("Alex", "Ben", "Chloe")
+    println("MutableSet before add: $mutableSet")
+    mutableSet.add("Adam")
+    println("MutableSet after add: $mutableSet")
 }
