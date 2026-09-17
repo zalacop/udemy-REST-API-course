@@ -23,6 +23,6 @@ fun main() {
 
     val nameAgeMutableMap = mutableMapOf("Dilip" to 34, "Scooby" to 4)
     println("NameAge Map before put: $nameAgeMap")
-    nameAgeMutableMap.put("abc", 100)
+    nameAgeMutableMap["abc"] = 100
     println("NameAge MutableMap after put: $nameAgeMutableMap")
 }
