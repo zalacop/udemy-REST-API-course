@@ -14,6 +14,6 @@ fun exploreFilter(courseList: MutableList<Course>) {
 
     val developmentCourses = courseList
         .filter { it.category == CourseCategory.DEVELOPEMENT }
-
-    println("Development courses : $developmentCourses")
+        .forEach { println("Development courses : $it") }
+    
 }
