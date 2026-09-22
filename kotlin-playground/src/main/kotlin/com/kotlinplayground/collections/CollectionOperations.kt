@@ -7,13 +7,17 @@ import org.example.com.kotlinplayground.dataset.courseList
 fun main() {
     val courseList = courseList()
 
-    exploreFilter(courseList)
+    val devPredicate = { c: Course -> c.category == CourseCategory.DEVELOPEMENT }
+
+    exploreFilter(courseList, devPredicate)
 }
 
-fun exploreFilter(courseList: MutableList<Course>) {
+fun exploreFilter(courseList: MutableList<Course>,
+                  predicate: (Course) -> Boolean) {
 
     val developmentCourses = courseList
-        .filter { it.category == CourseCategory.DEVELOPEMENT }
-        .forEach { println("Development courses : $it") }
+        /*.filter { it.category == CourseCategory.DEVELOPEMENT }*/
+        .filter { predicate.invoke(it) }
+        .forEach { println("devCourses : $it") }
     
 }
