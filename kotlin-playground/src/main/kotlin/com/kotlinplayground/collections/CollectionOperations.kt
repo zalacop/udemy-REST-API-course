@@ -8,8 +8,9 @@ fun main() {
     val courseList = courseList()
 
     val devPredicate = { c: Course -> c.category == CourseCategory.DEVELOPEMENT }
+    val desPredicate = { c: Course -> c.category == CourseCategory.DESIGN }
 
-    exploreFilter(courseList, devPredicate)
+    exploreFilter(courseList, desPredicate)
 }
 
 fun exploreFilter(courseList: MutableList<Course>,
@@ -18,6 +19,8 @@ fun exploreFilter(courseList: MutableList<Course>,
     val developmentCourses = courseList
         /*.filter { it.category == CourseCategory.DEVELOPEMENT }*/
         .filter { predicate.invoke(it) }
-        .forEach { println("devCourses : $it") }
+        .forEach {
+            println("devCourses : $it")
+        }
     
 }
