@@ -36,7 +36,18 @@ fun main() {
     val course = exploreFlatMap(courseList, KAFKA)
     println("Courses : $course")*/
 
-    exploreHasMap()
+    //exploreHasMap()
+    collections_nullability()
+}
+
+fun collections_nullability() {
+
+    var list : MutableList<String>? = null
+    list = mutableListOf()
+    list.add("Zala")
+    list.forEach {
+        println("Value is : $$it")
+    }
 }
 
 fun exploreHasMap() {
