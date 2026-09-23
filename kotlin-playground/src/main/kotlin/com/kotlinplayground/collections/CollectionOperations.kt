@@ -10,8 +10,26 @@ fun main() {
     val devPredicate = { c: Course -> c.category == CourseCategory.DEVELOPEMENT }
     val desPredicate = { c: Course -> c.category == CourseCategory.DESIGN }
 
+    val list = listOf(listOf(1, 2, 3), listOf(4, 5, 6))
+
+    val mapResult = list.map { outerList ->
+        outerList.map {
+            it.toDouble()
+        }
+    }
+
+    println("Map Result : $mapResult")
+
+    val flatMapResult = list.flatMap { outerList ->
+        outerList.map {
+            it.toDouble()
+        }
+    }
+
+    println("FlatMap Result : $flatMapResult")
+
     //exploreFilter(courseList, desPredicate)
-    exploreMap(courseList, desPredicate)
+    //exploreMap(courseList, devPredicate)
 }
 
 fun exploreMap(courseList: MutableList<Course>, predicate: (Course) -> Boolean) {
