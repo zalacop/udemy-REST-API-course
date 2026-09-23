@@ -2,6 +2,7 @@ package org.example.com.kotlinplayground.collections
 
 import org.example.com.kotlinplayground.dataset.Course
 import org.example.com.kotlinplayground.dataset.CourseCategory
+import org.example.com.kotlinplayground.dataset.KAFKA
 import org.example.com.kotlinplayground.dataset.courseList
 
 fun main() {
@@ -30,6 +31,26 @@ fun main() {
 
     //exploreFilter(courseList, desPredicate)
     //exploreMap(courseList, devPredicate)
+
+    val course = exploreFlatMap(courseList, KAFKA)
+    println("Courses : $course")
+}
+
+fun exploreFlatMap(
+    courseList: MutableList<Course>,
+    kafka: String
+): List<String> {
+
+    val kafkaCourses = courseList.flatMap { course ->
+        val courseName = course.name
+        course.topicsCovered.filter {
+            it == kafka
+        }.map {
+            courseName
+        }
+    }
+
+    return kafkaCourses
 }
 
 fun exploreMap(courseList: MutableList<Course>, predicate: (Course) -> Boolean) {
