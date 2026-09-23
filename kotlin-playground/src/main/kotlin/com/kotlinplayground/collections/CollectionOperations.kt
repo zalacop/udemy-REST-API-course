@@ -11,13 +11,17 @@ fun main() {
     val desPredicate = { c: Course -> c.category == CourseCategory.DESIGN }
 
     //exploreFilter(courseList, desPredicate)
-    exploreMap(courseList)
+    exploreMap(courseList, desPredicate)
 }
 
-fun exploreMap(courseList: MutableList<Course>) {
+fun exploreMap(courseList: MutableList<Course>, predicate: (Course) -> Boolean) {
 
     val courses = courseList
-        .map { it.name }
+        .filter(predicate)
+        .map { "${it.name} - ${it.category}" }
+        .forEach {
+            println(it)
+        }
     println("Courses : $courses")
 }
 
