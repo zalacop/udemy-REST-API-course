@@ -52,6 +52,15 @@ fun exploreHasMap() {
 
     val result = nameAgeMutableMap.contains("abc")
     println("Result is $result")
+
+    val filteredMap =  nameAgeMutableMap.filterKeys { it.length > 5 }
+        .map { it.key.uppercase() }
+    println("filteredMap is $filteredMap")
+
+    val maxAge = nameAgeMutableMap
+        .maxByOrNull { it.value }
+
+    println("Max Age is $maxAge")
 }
 
 fun exploreFlatMap(
