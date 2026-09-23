@@ -11,7 +11,7 @@ fun main() {
     val devPredicate = { c: Course -> c.category == CourseCategory.DEVELOPEMENT }
     val desPredicate = { c: Course -> c.category == CourseCategory.DESIGN }
 
-    val list = listOf(listOf(1, 2, 3), listOf(4, 5, 6))
+ /*   val list = listOf(listOf(1, 2, 3), listOf(4, 5, 6))
 
     val mapResult = list.map { outerList ->
         outerList.map {
@@ -33,7 +33,21 @@ fun main() {
     //exploreMap(courseList, devPredicate)
 
     val course = exploreFlatMap(courseList, KAFKA)
-    println("Courses : $course")
+    println("Courses : $course")*/
+
+    exploreHasMap()
+}
+
+fun exploreHasMap() {
+
+    val nameAgeMutableMap = mutableMapOf("Zala" to 33, "Scooby" to 5)
+    nameAgeMutableMap
+        .forEach { (k, v) ->
+            println("Key : $k and value is $v")
+        }
+
+    val value = nameAgeMutableMap.get("Zala")
+    println("Value is $value")
 }
 
 fun exploreFlatMap(
