@@ -10,7 +10,15 @@ fun main() {
     val devPredicate = { c: Course -> c.category == CourseCategory.DEVELOPEMENT }
     val desPredicate = { c: Course -> c.category == CourseCategory.DESIGN }
 
-    exploreFilter(courseList, desPredicate)
+    //exploreFilter(courseList, desPredicate)
+    exploreMap(courseList)
+}
+
+fun exploreMap(courseList: MutableList<Course>) {
+
+    val courses = courseList
+        .map { it.name }
+    println("Courses : $courses")
 }
 
 fun exploreFilter(courseList: MutableList<Course>,
