@@ -4,6 +4,7 @@ import org.example.com.kotlinplayground.dataset.Course
 import org.example.com.kotlinplayground.dataset.CourseCategory
 import org.example.com.kotlinplayground.dataset.KAFKA
 import org.example.com.kotlinplayground.dataset.courseList
+import org.example.com.kotlinplayground.functions.courseName
 
 fun main() {
     val courseList = courseList()
@@ -46,8 +47,11 @@ fun exploreHasMap() {
             println("Key : $k and value is $v")
         }
 
-    val value = nameAgeMutableMap["Zala"]
+    val value = nameAgeMutableMap.getOrElse("Zala1") {"abc"}
     println("Value is $value")
+
+    val result = nameAgeMutableMap.contains("abc")
+    println("Result is $result")
 }
 
 fun exploreFlatMap(
