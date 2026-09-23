@@ -46,7 +46,7 @@ fun exploreHasMap() {
             println("Key : $k and value is $v")
         }
 
-    val value = nameAgeMutableMap.get("Zala")
+    val value = nameAgeMutableMap["Zala"]
     println("Value is $value")
 }
 
