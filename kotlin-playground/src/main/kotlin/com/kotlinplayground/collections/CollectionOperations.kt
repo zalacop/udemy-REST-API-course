@@ -48,6 +48,12 @@ fun collections_nullability() {
     list.forEach {
         println("Value is : $$it")
     }
+
+    val list1 : List<String?> = listOf("Adam", null, "Alex")
+    list1.forEach {
+        println("Value length is : ${it?.length}")
+    }
+
 }
 
 fun exploreHasMap() {
