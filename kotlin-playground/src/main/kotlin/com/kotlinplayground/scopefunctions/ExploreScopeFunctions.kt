@@ -14,8 +14,9 @@ fun exploreApply() {
         id = 1,
         name = "Design Thinking in Kotlin",
         author = "Dilip"
-    ).apply {
-        this.courseCategory = CourseCategory.DESIGN
+    ).apply { this
+        courseCategory = CourseCategory.DESIGN
+        //this.courseCategory = CourseCategory.DESIGN
     }
 
     println("Course : $course")
