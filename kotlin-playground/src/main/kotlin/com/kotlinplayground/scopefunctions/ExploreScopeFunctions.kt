@@ -1,5 +1,7 @@
 package org.example.com.kotlinplayground.scopefunctions
 
+import org.example.com.kotlinplayground.classes.Course
+
 fun main() {
 
     exploreApply()
