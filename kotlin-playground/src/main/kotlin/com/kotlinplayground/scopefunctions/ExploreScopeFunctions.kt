@@ -6,7 +6,14 @@ import org.example.com.kotlinplayground.classes.CourseCategory
 fun main() {
 
     //exploreApply()
-    exploreAlso()
+    //exploreAlso()
+    exploreLet()
+}
+
+fun exploreLet() {
+    val numbers = mutableListOf(1, 2, 3, 4, 5)
+    val result = numbers.map { it * 2 }.filter { it > 5 }
+    println(result)
 }
 
 fun exploreApply() {
