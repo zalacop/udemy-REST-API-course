@@ -17,6 +17,15 @@ fun exploreLet() {
         it.sum()
     }
     println(result)
+
+    var name : String? = null
+
+    var result1 = name?.let {
+        println(it)
+        it.uppercase()
+    }
+
+    println(result1)
 }
 
 fun exploreApply() {
