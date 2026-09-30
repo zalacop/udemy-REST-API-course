@@ -6,6 +6,7 @@ import org.example.com.kotlinplayground.classes.CourseCategory
 fun main() {
 
     exploreApply()
+    exploreAlso()
 }
 
 fun exploreApply() {
@@ -20,4 +21,17 @@ fun exploreApply() {
     }
 
     println("Course : $course")
+}
+
+fun exploreAlso() {
+
+    val course = Course(
+        id = 1,
+        name = "Design Thinking in Kotlin",
+        author = "Dilip"
+    ).also {
+        //it.courseCategory = CourseCategory.DESIGN
+        println("Course is $it")
+    }
+
 }
