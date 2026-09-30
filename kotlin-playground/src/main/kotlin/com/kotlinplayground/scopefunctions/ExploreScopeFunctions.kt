@@ -19,7 +19,7 @@ fun exploreLet() {
     println(result)
 
     var name : String? = null
-
+    name = "Zala"
     var result1 = name?.let {
         println(it)
         it.uppercase()
