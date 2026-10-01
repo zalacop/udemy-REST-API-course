@@ -7,7 +7,18 @@ fun main() {
 
     //exploreApply()
     //exploreAlso()
-    exploreLet()
+    //exploreLet()
+    exploreWith()
+}
+
+fun exploreWith() {
+    val numbers = mutableListOf(1, 2, 3, 4, 5)
+        val result = with(numbers) { this
+            println("Size is ${numbers.size}")
+            numbers.plus(6)
+            numbers.sum()
+        }
+    println("With result is : $result")
 }
 
 fun exploreLet() {
