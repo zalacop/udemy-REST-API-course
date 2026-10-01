@@ -14,9 +14,12 @@ fun main() {
 fun exploreWith() {
     val numbers = mutableListOf(1, 2, 3, 4, 5)
         val result = with(numbers) { this
-            println("Size is ${numbers.size}")
-            numbers.plus(6)
-            numbers.sum()
+         /*   println("Size is ${numbers.size}")
+            val list = numbers.plus(6)
+            list.sum()*/
+
+            println("Size is $size")
+            sum()
         }
     println("With result is : $result")
 }
