@@ -20,6 +20,14 @@ fun exploreRun() {
         numbers?.sum()
     }
     println("Run result is : $result")
+
+    val length = run {
+        val name = "Zala"
+        println(name)
+        name.length
+    }
+
+    println("Run Length is : $length")
 }
 
 fun exploreWith() {
