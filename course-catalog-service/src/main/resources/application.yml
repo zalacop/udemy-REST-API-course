@@ -4,10 +4,3 @@ spring:
 
 message: Hello from default profile
 
----
-spring:
-  config:
-    activate:
-      on-profile: prod
-
-message: Hello from prof profile
