@@ -3,21 +3,19 @@ package com.kotlinspring.controller
 import org.junit.jupiter.api.Assertions
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.context.SpringBootTest
-import org.springframework.boot.webmvc.test.autoconfigure.AutoConfigureMockMvc
-import org.springframework.test.context.ActiveProfiles
+import org.springframework.boot.webclient.test.autoconfigure.AutoConfigureWebClient
 import org.springframework.test.web.reactive.server.WebTestClient
 import kotlin.test.Test
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-@ActiveProfiles("test")
-@AutoConfigureMockMvc
-class GreetingControllerIntgTest {
+@AutoConfigureWebClient
+class GreetingControllerIntTest {
 
     @Autowired
     lateinit var webTestClient: WebTestClient
 
     @Test
-    internal fun retrieveGreeting() {
+     fun retrieveGreeting() {
 
         val name = "Zala"
 
